@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fullscreen Image (Unscaled, Bottom Text)</title>
+  <title>Manual Size Image</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
       height: 100%;
+      background-color: black;
       overflow: hidden;
-      background-color: black; /* background behind the image */
     }
 
     .container {
-      position: relative;
       width: 100%;
       height: 100%;
+      position: relative;
     }
 
-    img {
+    .centered-image {
       position: absolute;
       top: 50%;
       left: 50%;
+      /* 👇 Set image size manually here: */
+      width: 600px; /* or use height: 400px; or both */
       transform: translate(-50%, -50%);
-      max-width: none;
-      max-height: none;
     }
 
     .overlay-text {
-      position: absolute;
+      position: fixed;
       bottom: 20px;
       left: 20px;
       color: white;
@@ -36,18 +37,19 @@
       padding: 15px 20px;
       border-radius: 8px;
       font-family: sans-serif;
+      z-index: 10;
     }
   </style>
 </head>
 <body>
- <div class="container">
-    <img class="centered-image" src="./Aditya.jpg" alt="Original Size Image">
+
+  <div class="container">
+    <img class="centered-image" src="./Aditya.jpg" alt="Manual Sized Image">
   </div>
 
-   <div class="overlay-text">
-      <h1></h1>
-      <p>www.theAditya.name/LinkedIn</p>
-      </div>
+  <div class="overlay-text">
+    <h1>Hello World</h1>
+    <p>I'm hosted with GitHub Pages.</p>
   </div>
 
 </body>
