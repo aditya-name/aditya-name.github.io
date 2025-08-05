@@ -21,10 +21,9 @@
 
     .centered-image {
       position: absolute;
-      top: 55%;
-      left: 50%;
-      /* 👇 Set image size manually here: */
-      width: 600px; /* or use height: 400px; or both */
+      top: 60%;
+      left: 40%;
+      width: 600px;
       transform: translate(-50%, -50%);
     }
 
@@ -39,6 +38,16 @@
       font-family: sans-serif;
       z-index: 10;
     }
+
+    .overlay-text a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .overlay-text a:hover {
+      color: #ccc; /* light gray */
+    }
   </style>
 </head>
 <body>
@@ -48,12 +57,12 @@
   </div>
 
   <div class="overlay-text">
-     <h1></h1>
-  <p>
-    <a href="https://www.theAditya.name/LinkedIn" target="_blank" style="color: white; ;">
-      theAditya.name/LinkedIn
-    </a>
-  </p>
+    <h1></h1>
+    <p>
+      <a href="https://www.theAditya.name/LinkedIn" target="_blank">
+        www.theAditya.name/LinkedIn
+      </a>
+    </p>
   </div>
 
 </body>
