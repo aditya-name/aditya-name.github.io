@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aditya</title>
   <style>
     html, body {
@@ -23,7 +24,9 @@
       position: absolute;
       top: 60%;
       left: 40%;
-      width: 600px;
+      width: 90vw; /* Responsive width */
+      max-width: 600px;
+      height: auto;
       transform: translate(-50%, -50%);
     }
 
@@ -31,22 +34,32 @@
       position: fixed;
       bottom: 20px;
       left: 20px;
+      right: 20px; /* for smaller screens */
       color: white;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 15px 20px;
       border-radius: 8px;
       font-family: sans-serif;
       z-index: 10;
+      font-size: 1rem;
     }
 
     .overlay-text a {
       color: white;
       text-decoration: none;
       transition: color 0.3s ease;
+      word-break: break-word;
     }
 
     .overlay-text a:hover {
       color: #ccc;
+    }
+
+    @media (max-width: 480px) {
+      .overlay-text {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
     }
   </style>
 </head>
@@ -57,7 +70,6 @@
   </div>
 
   <div class="overlay-text">
-    <h1></h1>
     <p>
       <a href="https://www.theAditya.name/LinkedIn" target="_blank">
         theAditya.name/LinkedIn
